@@ -1,36 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Documents | Aga Khan Baug</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <header>
-      <h1>AGA KHAN BAUG</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="committee.html">Committee</a>
-        <a href="documents.html">Documents</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+  <meta charset="UTF-8">
+  <title>Documents | Aga Khan Baug</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <main class="page-container">
-    <h1>Society Documents</h1>
-    <p>Please click below to upload or view society documents.</p>
+  <!-- Header -->
+  <header>
+    <h1>AGA KHAN BAUG</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="committee.html">Committee</a>
+      <a href="documents.html">Documents</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
+  <!-- Main Content -->
+  <main class="page-container">
+    <h1>Society Documents</h1>
+    <p>Click on a document to view or download.</p>
+
+    <!-- Documents will appear here -->
+    <ul id="documentsList" class="documents-list"></ul>
+
+    <!-- Admin Upload Button -->
     <a href="https://agakhanbaug.great-site.net/index.php"
        target="_blank"
        class="doc-button">
-       Go to Document Upload Page
+       Admin Login / Upload Documents
     </a>
-</main>
+  </main>
 
+  <!-- Footer -->
+  <footer>
+    © 2026 AGA KHAN BAUG Housing Society
+  </footer>
 
-    <footer>© 2026 AGA KHAN BAUG Housing Society</footer>
-    
+  <!-- JavaScript: Load documents.json -->
+  <script>
+    fetch('documents.json')
+      .then(response => response.json())
+      .then(data => {
+        const list = document.getElementById('documentsList');
+
+        if (!data || data.length === 0) {
+          list.innerHTML = '<li>No documents available yet.</li>';
+          return;
+        }
+
+        data.forEach(doc => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="${doc.path}" target="_blank">${doc.name}</a>`;
+          list.appendChild(li);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading documents:', error);
+      });
+  </script>
+
 </body>
 </html>

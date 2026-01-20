@@ -8,67 +8,36 @@
 
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>AGA KHAN BAUG</h1>
-    <nav>
-      <a href="index.html">Home</a>
+<header>
+  <h1>AGA KHAN BAUG</h1>
+  <nav>
+    <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="committee.html">Committee</a>
-
-    <!-- Documents lives on InfinityFree -->
-    <a href="https://agakhanbaug.great-site.net/documents.html"
-       target="_blank">
-       Documents
-    </a>
-
+    <a href="documents.html" class="active">Documents</a>
     <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  </nav>
+</header>
 
-  <!-- Main Content -->
-  <main class="page-container">
-    <h1>Society Documents</h1>
-    <p>Click on a document to view or download.</p>
+<main class="page-container">
+  <h2>Society Documents</h2>
 
-    <!-- Documents will appear here -->
-    <ul id="documentsList" class="documents-list"></ul>
+  <p>
+    All official society documents are securely hosted on our document portal.
+  </p>
 
-    <!-- Admin Upload Button -->
-    <a href="https://agakhanbaug.great-site.net/documents.html"
-       target="_blank"
-       class="doc-button">
-    View Society Documents    
-    </a>
-  </main>
+  <a
+    href="https://agakhanbaug.great-site.net/index.php"
+    target="_blank"
+    class="doc-button"
+  >
+    View Society Documents
+  </a>
+</main>
 
-  <!-- Footer -->
-  <footer>
-    © 2026 AGA KHAN BAUG Housing Society
-  </footer>
-
-  <!-- JavaScript: Load documents.json -->
-  <script>
-    fetch('documents.json')
-      .then(response => response.json())
-      .then(data => {
-        const list = document.getElementById('documentsList');
-
-        if (!data || data.length === 0) {
-          list.innerHTML = '<li>No documents available yet.</li>';
-          return;
-        }
-
-        data.forEach(doc => {
-          const li = document.createElement('li');
-          li.innerHTML = `<a href="${doc.path}" target="_blank">${doc.name}</a>`;
-          list.appendChild(li);
-        });
-      })
-      .catch(error => {
-        console.error('Error loading documents:', error);
-      });
-  </script>
+<footer>
+  © 2026 AGA KHAN BAUG Housing Society
+</footer>
 
 </body>
 </html>

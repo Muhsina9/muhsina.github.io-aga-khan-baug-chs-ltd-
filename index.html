@@ -6,6 +6,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+  <script>
+  fetch("https://agakhanbaug.great-site.net/news.json")
+    .then(res => res.json())
+    .then(data => {
+      data.items.forEach(item => {
+      if (item.category === "notices") {
+        const card = document.getElementById("card-notices");
+        const text = document.getElementById("notice-text");
+
+        card.classList.add("new");
+        text.innerHTML = `
+          <span class="badge-new">NEW</span><br>
+          <strong>${item.title}</strong><br>
+          ${item.message}
+        `;
+      }
+
+      if (item.category === "documents") {
+        const card = document.getElementById("card-documents");
+        const text = document.getElementById("document-text");
+
+        card.classList.add("new");
+        text.innerHTML = `
+          <span class="badge-new">NEW</span><br>
+          <strong>${item.title}</strong><br>
+          ${item.message}
+        `;
+      }
+    });
+  })
+  .catch(() => console.log("No updates"));
+</script>
+
 <body>
 
 <header>

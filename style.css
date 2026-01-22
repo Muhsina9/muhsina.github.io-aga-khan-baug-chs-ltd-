@@ -45,19 +45,34 @@ section {
   margin-bottom: 10px;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+.page-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+.society-story h2 {
+  margin-bottom: 10px;
 }
+
+.since {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 25px 0;
+}
+
+.archive-image {
+  margin-top: 30px;
+  max-width: 100%;
+  border-radius: 6px;
+}
+
 
 ul {
   list-style: none;

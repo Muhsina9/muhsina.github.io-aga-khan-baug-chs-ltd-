@@ -154,23 +154,6 @@ button {
   overflow: hidden;
 }
 
-/*cards notices-documents*/
-.card.new {
-  border: 2px solid #2f7d64;
-  background: #f1faf7;
-}
-
-.badge-new {
-  display: inline-block;
-  background: #2f7d64;
-  color: white;
-  font-size: 12px;
-  padding: 2px 8px;
-  border-radius: 12px;
-  margin-bottom: 8px;
-}
-
-
 footer {
   background: white;
   text-align: center;

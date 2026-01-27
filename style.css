@@ -63,13 +63,11 @@ nav a {
   color: #333;
   font-weight: 500;
 }
-
 nav {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap; /* ✅ keep in one line */
 }
-
 .navbar {
   display: flex;
   align-items: center;

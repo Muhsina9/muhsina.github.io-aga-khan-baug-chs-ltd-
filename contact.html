@@ -6,19 +6,10 @@
   <title>Contact | AGA KHAN BAUG</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <!-- ================= Hamburger menu for mobile and tables ================= -->
-<header>
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("navLinks");
-
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
-</script>
 <body>
 
-<header>
+<!-- ================= HEADER ================= -->
+<header class="site-header">
   <h1>AGA KHAN BAUG</h1>
 
   <nav class="navbar">
@@ -76,6 +67,16 @@
 <footer>
   © 2026 AGA KHAN BAUG Housing Society
 </footer>
+  
+  <!-- ================= HAMBURGER SCRIPT ================= -->
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
 
 </body>
 </html>

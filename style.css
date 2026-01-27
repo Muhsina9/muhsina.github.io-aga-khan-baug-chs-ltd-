@@ -16,13 +16,33 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #ffffff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  max-width: 100%;
+}
+
+/* header {
   background: #ffffff;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
+} */
 
 header h1 {
   font-size: 22px;
@@ -291,46 +311,51 @@ footer {
   cursor: pointer;
 }
 
-/* =========================
-   MOBILE & TABLET NAV
-========================= */
 @media (max-width: 768px) {
-
-  /* Show hamburger */
-  .hamburger {
-    display: block;
-  }
-
-  /* Stack header content cleanly */
   header {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
+    padding: 16px 20px;
   }
 
-  /* Keep title + hamburger on one row */
-  .navbar {
+  .brand {
     width: 100%;
     justify-content: space-between;
   }
 
-  /* Hide menu by default */
+  .logo {
+    height: 40px;        /* 🔑 THIS IS THE FIX */
+    max-width: 160px;   /* prevents huge scaling */
+  }
+
+  header h1 {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  nav {
+    width: 100%;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
     margin-top: 12px;
-    padding-top: 10px;
-    border-top: 1px solid #e5e7eb;
   }
 
-  /* Show menu when toggled */
   .nav-links.show {
     display: flex;
   }
 
-  /* Dropdown link spacing */
   .nav-links a {
-    margin: 10px 0;
+    padding: 10px 0;
     font-size: 15px;
   }
 }

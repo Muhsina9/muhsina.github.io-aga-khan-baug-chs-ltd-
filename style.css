@@ -366,7 +366,29 @@ footer {
 @media (max-width: 600px) {
 
   header {
-    padding: 16px 20px;
+    padding: 14px 20px;
+  }
+
+  .logo {
+    height: 42px;
+    max-height: 42px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 
   header h1 {

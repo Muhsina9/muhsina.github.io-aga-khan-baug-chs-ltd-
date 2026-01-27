@@ -2,26 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AGA KHAN BAUG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
 </head>
-<!-- ================= Hamburger menu for mobile and tables ================= -->
-<header>
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("navLinks");
 
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
-</script>
-  
 <body>
 
 <!-- ================= HEADER ================= -->
-<header>
+<header class="site-header">
   <h1>AGA KHAN BAUG</h1>
 
   <nav class="navbar">
@@ -36,7 +26,6 @@
     </div>
   </nav>
 </header>
-
 
 <!-- ================= HERO ================= -->
 <section class="hero">
@@ -63,31 +52,21 @@
   >
 
   <p>
-    His Late Highness Aga Khan IV profound pleasure to return to Versova
-    to formally open the Aga Khan Baug housing project, a development conceived
-    to restore dignity, stability, and hope to families facing urban poverty.
+    His Late Highness Aga Khan IV expressed profound pleasure to return to Versova
+    to formally open the Aga Khan Baug housing project, conceived to restore
+    dignity, stability, and hope to families facing urban poverty.
   </p>
 
   <p>
     Declaring the housing ready to receive its first residents, he described
     the project as more than a construction milestone — it was a social
-    foundation intended to uplift generations through secure housing, improved
-    health, and access to education.
+    foundation intended to uplift generations.
   </p>
 
   <p>
-    Emphasising the responsibility of the fortunate to ignite the “spark of
-    human endeavour,” the Aga Khan spoke of housing as the first ingredient of
-    self-respect, capable of transforming family life, work ethic, and future
-    opportunity.
+    He emphasised housing as the first ingredient of self-respect, capable of
+    transforming family life, work ethic, and future opportunity.
   </p>
-
-  <!-- Optional future link -->
-  <!--
-  <a href="history.html" class="doc-button">
-    Read the Full Address
-  </a>
-  -->
 
 </section>
 
@@ -95,6 +74,16 @@
 <footer>
   © 2026 AGA KHAN BAUG Housing Society
 </footer>
+
+<!-- ================= HAMBURGER SCRIPT ================= -->
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
 
 </body>
 </html>

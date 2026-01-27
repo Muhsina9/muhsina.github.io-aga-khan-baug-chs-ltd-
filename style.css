@@ -1,3 +1,8 @@
+/* =========================
+   FONT IMPORT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -404,6 +409,78 @@ footer {
   .page-container {
     max-width: 85%;
   }
+}
+/* =========================
+   HEADER STABILITY & POLISH
+========================= */
+
+/* Ensure header content stays aligned */
+header {
+  width: 100%;
+}
+
+header h1 {
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* Improve nav link interaction */
+nav a:hover {
+  color: #0b6b57;
+}
+
+nav a:focus-visible {
+  outline: 2px solid #0b6b57;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* =========================
+   HAMBURGER USABILITY
+========================= */
+.hamburger {
+  padding: 6px 10px;
+  border-radius: 6px;
+  user-select: none;
+}
+
+.hamburger:hover {
+  background: #f0f4f2;
+}
+
+/* =========================
+   MOBILE MENU POLISH
+========================= */
+@media (max-width: 768px) {
+
+  .nav-links a {
+    padding: 10px 4px;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+}
+
+/* =========================
+   IMAGE SAFETY
+========================= */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   BUTTON ACCESSIBILITY
+========================= */
+button:hover {
+  background-color: #0c5944;
+}
+
+button:focus-visible {
+  outline: 2px solid #0b6b57;
+  outline-offset: 3px;
 }
 
 

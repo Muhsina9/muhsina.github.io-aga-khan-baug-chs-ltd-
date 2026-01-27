@@ -15,6 +15,13 @@ body {
   color: #222;
 }
 
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 🔥 logo left, hamburger right */
+  width: 100%;
+}
+
 /* header {
   display: flex;
   justify-content: space-between;
@@ -369,21 +376,14 @@ footer {
 /* =========================
    MOBILE CONTENT
 ========================= */
-@media (max-width: 600px) {
-
-  header {
-    padding: 14px 20px;
-  }
-
-  .logo {
-    height: 42px;
-    max-height: 42px;
+@media (max-width: 768px) {
+ header {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .hamburger {
     display: block;
-    font-size: 24px;
-    cursor: pointer;
   }
 
   .nav-links {
@@ -396,7 +396,6 @@ footer {
   .nav-links.show {
     display: flex;
   }
-
   header h1 {
     font-size: 18px;
   }
@@ -405,7 +404,7 @@ footer {
     padding: 20px 16px;
     margin: 20px auto;
   }
-
+   
   .page-title {
     font-size: 24px;
   }
